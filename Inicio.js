@@ -1,11 +1,13 @@
-import express from 'express'; // Cambiamos require por import
-import mysql from 'mysql2';
-import session from 'express-session';
-import bodyParser from 'body-parser';
 import {PORT} from './Config.js'
 import {DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT} from './Config.js'
 
+const express = require('express'); // Importamos el módulo express
+const mysql = require('mysql2'); // Importamos el módulo mysql
+const session = require('express-session'); // Importamos el módulo express-session 
+const bodyParser = require('body-parser'); // Importamos el módulo body-parser
 const app = express();
+
+mysql://root:AYmkaivYPqdDoLDxAABioYSosCGLvOul@autorack.proxy.rlwy.net:24830/railway
 
 app.use(express.static('public'));
 
