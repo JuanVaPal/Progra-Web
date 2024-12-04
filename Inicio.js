@@ -1,6 +1,5 @@
-import {PORT} from './Config.js'
-import {DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT} from './Config.js'
-
+const {PORT}= require('./Config.js');
+const {DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT } = require('./Config.js');
 const express = require('express'); // Importamos el módulo express
 const mysql = require('mysql2'); // Importamos el módulo mysql
 const session = require('express-session'); // Importamos el módulo express-session 

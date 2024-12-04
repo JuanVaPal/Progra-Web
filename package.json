@@ -2,7 +2,6 @@
   "name": "proyectou3",
   "version": "1.0.0",
   "main": "Inicio.js",
-   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node Inicio.js"
