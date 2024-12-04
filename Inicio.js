@@ -2,8 +2,7 @@ import express from 'express'; // Cambiamos require por import
 import mysql from 'mysql2';
 import session from 'express-session';
 import bodyParser from 'body-parser';
-import {PORT} from './Config.js'
-import {DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT} from './Config.js'
+
 
 const app = express();
 
@@ -15,12 +14,14 @@ app.use(bodyParser.json());
 
 //Creamos la conexion a la base de datos con el metodo createConnection
 let conexion = mysql.createConnection({
-    host: DB_HOST,
-    database: DB_NAME,
-    user: DB_USER,
-    password: DB_PASSWORD}); 
+    host: process.env.DB_HOST || 'mysql.railway.internal', // Asegúrate de que sea la dirección correcta
+    user: process.env.DB_USER || 'root',
+    password: process.env.DB_PASSWORD || 'Palafox1-',
+    database: process.env.DB_NAME || 'proyectoud4'
+}); 
 //Vamos a usar el motor de plantillas ejs
 app.set('view engine', 'ejs');
+
 
 app.use(express.json()); //Para reconocer objetos con extension JSON
 app.use(express.urlencoded({extended: false})); //Express codifica todo el contenido que viene de un formulario (paginas html)
