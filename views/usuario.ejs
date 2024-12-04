@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/Proyecto.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+        <style>
+        .navbar-item img {
+            width: 200px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="encabezado">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" onclick="window.location.href='/usuario'">
+                    <img src="https://i.pinimg.com/736x/3b/04/e4/3b04e4e018b1956f83042d33681534bb.jpg" alt="Login Image">
+                    </a>
+            
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+            
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item" onclick="window.location.href='/menu'">
+                            Menú
+                        </a>
+
+                        <a class="navbar-item" onclick="abrirMenu()">
+                            Pedir
+                        </a>
+                        <a class="navbar-item" onclick="window.location.href='/reservaciones'">
+                            Historial
+                        </a>
+                    </div>
+                </div>
+            
+                <div class="navbar-end">
+                    <a class="navbar-item" onclick="window.location.href='/login'">
+                        <img src="Imagenes/Acceso2.png" alt="Profile Image" id="sesion">
+                    </a>
+                    
+                </div>
+            </nav>
+        </div>
+        <div class="contenido">
+            <div class="Promociones">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="Imagenes/Combo1.jpg" class="img" alt="Combo 1">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="Imagenes/Combo2.jpg" class="img" alt="Combo 2">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="Imagenes/Combo3.jpg" class="img" alt="Combo 3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="ProductosIcono" style="margin-top: 20px;">
+                    <section class="tituloProductos">
+                        <center><h2>Conoce Nuestros Productos</h2></center>
+                    </section>
+                    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="d-flex justify-content-around">
+                                    <section class="unidad">
+                                        <a href="menu.html"><img src="Imagenes/Platillos.png" class="d-block" alt="Imagen de Dragon"></a>
+                                        <p>Platillos</p>
+                                    </section>
+                                    <section class="unidad">
+                                        <a href="menu.html"><img src="Imagenes/te-helado.png" class="d-block" alt="Imagen de Dragon"></a>
+                                        <p>Bebidas</p>
+                                    </section>
+                                    <section class="unidad">
+                                        <a href="menu.html"><img src="Imagenes/galleta-de-la-suerte.png" class="d-block" alt="Imagen de Dragon"></a>
+                                        <p>Postres</p>
+                                    </section>
+                                    <section class="unidad">
+                                        <a href="menu.html"><img src="Imagenes/dimsumcarr.png" class="d-block" alt="Imagen de Dragon"></a>
+                                        <p>Combos</p>
+                                    </section>
+                                    <section class="unidad">
+                                        <a href="menu.html"><img src="Imagenes/contenedor-de-comida.png" class="d-block" alt="Imagen de Dragon"></a>
+                                        <p>Presentaciones</p>
+                                    </section>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-flex justify-content-around">
+                                    <section class="unidad">
+                                        <button onclick="abrirMenu()"><img src="Imagenes/Bebida1.jpg" class="d-block" alt="Imagen de Dragon"></button>
+                                        <p>Té de Jazmin</p>
+                                    </section>
+                                    <section class="unidad">
+                                        <button onclick="abrirMenu()"><img src="Imagenes/Platillo3.jpg" class="d-block" alt="Imagen de Dragon"></button>
+                                        <p>Pato Pekín</p>
+                                    </section>
+                                    <section class="unidad">
+                                        <button onclick="abrirMenu()"><img src="Imagenes/Postres5.webp" class="d-block" alt="Imagen de Dragon"></button>
+                                        <p>Frutas caramelizadas</p>
+                                    </section>
+                                    <section class="unidad">
+                                        <button onclick="abrirMenu()"><img src="Imagenes/Platillo7.avif" class="d-block" alt="Imagen de Dragon"></button>
+                                        <p>Rollitos primavera</p>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+            </div>
+
+            <div class="Combos">
+                    <img src="Imagenes/Combos.jpg" alt="">
+            </div>
+
+            <div class="menu">
+                <section class="tituloProductos">
+                    <center><h2>Para Elegir...</h2></center>
+                </section>
+                    <div class="filaproductos">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                <img
+                                src="Imagenes/Platillo1.jpg"
+                                alt="Placeholder image"/>
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48">
+                                        <img
+                                        src="Imagenes/Mings.jpg"
+                                        alt="Placeholder image"
+                                        />
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Cerdo Agridulce</p>
+                                    </div>
+                                </div>
+                        
+                                <div class="content">
+                                    Una variedad de pequeñas porciones de comida que incluyen dumplings, bollos y otras delicias, servidas al vapor o fritas.
+                                    <a href="#">#platillo</a>
+                                    <br>
+                                    <br>
+                                    <button class="ordenar" onclick="abrirMenu()">Ordenar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                <img
+                                src="Imagenes/Platillo2.webp"
+                                alt="Placeholder image"/>
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48">
+                                        <img
+                                        src="Imagenes/Mings.jpg"
+                                        alt="Placeholder image"
+                                        />
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Chow Mein</p>
+                                    </div>
+                                </div>
+                        
+                                <div class="content">
+                                    Fideos salteados con verduras y alguna proteína como pollo, res, o camarones.
+                                    <a href="#">#platillo</a>
+                                    <br>
+                                    <br>
+                                    <button class="ordenar" onclick="abrirMenu()">Ordenar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                <img
+                                src="Imagenes/Platillo3.jpg"
+                                alt="Placeholder image"/>
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48">
+                                        <img
+                                        src="Imagenes/Mings.jpg"
+                                        alt="Placeholder image"
+                                        />
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Pato Pekín</p>
+                                    </div>
+                                </div>
+                        
+                                <div class="content">
+                                    Pato asado, característico por su piel crujiente, servido con tortillas delgadas y salsa hoisin. <a>@bulmaio</a>. <a href="#">#css</a>
+                                    <a href="#">#platillo</a>
+                                    <br>
+                                    <br>
+                                    <button class="ordenar" onclick="abrirMenu()">Ordenar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                <img
+                                src="Imagenes/Platillo4.webp"
+                                alt="Placeholder image"/>
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48">
+                                        <img
+                                        src="Imagenes/Mings.jpg"
+                                        alt="Placeholder image"
+                                        />
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Dim Sum</p>
+                                    </div>
+                                </div>
+                        
+                                <div class="content">
+                                    Una variedad de pequeñas porciones de comida que incluyen dumplings, bollos y otras delicias, servidas al vapor o fritas.
+                                    <a href="#">#platillo</a>
+                                    <br>
+                                    <br>
+                                    <button class="ordenar" onclick="abrirMenu()">Ordenar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filaproductos">
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                <img
+                                src="Imagenes/Bebida1.jpg"
+                                alt="Placeholder image"/>
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48">
+                                        <img
+                                        src="Imagenes/Mings.jpg"
+                                        alt="Placeholder image"
+                                        />
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Té de Jazmin</p>
+                                    </div>
+                                </div>
+                        
+                                <div class="content">
+                                    Una variedad de pequeñas porciones de comida que incluyen dumplings, bollos y otras delicias, servidas al vapor o fritas.
+                                    <a href="#">#bebida</a>
+                                    <br>
+                                    <br>
+                                    <button class="ordenar" onclick="abrirMenu()">Ordenar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                <img
+                                src="Imagenes/Bebida2.jpg"
+                                alt="Placeholder image"/>
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48">
+                                        <img
+                                        src="Imagenes/Mings.jpg"
+                                        alt="Placeholder image"
+                                        />
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Licor de arroz (Shao Xing)</p>
+                                    </div>
+                                </div>
+                        
+                                <div class="content">
+                                    Un vino de arroz tradicional que se utiliza tanto en la cocina como en las celebraciones. Tiene un sabor suave y un toque dulce.                                    
+                                    <a href="#">#bebida</a>
+                                    <br>
+                                    <br>
+                                    <button class="ordenar" onclick="abrirMenu()">Ordenar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                <img
+                                src="Imagenes/Postre1.JPG"
+                                alt="Placeholder image"/>
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48">
+                                        <img
+                                        src="Imagenes/Mings.jpg"
+                                        alt="Placeholder image"
+                                        />
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Bolas de sésamo (Jian Dui)</p>
+                                    </div>
+                                </div>
+                        
+                                <div class="content">
+                                    Bolas de masa fritas hechas de harina de arroz glutinoso y cubiertas de semillas de sésamo, con un relleno de pasta de frijol rojo o loto.
+                                    <a href="#">#postre</a>
+                                    <br>
+                                    <br>
+                                    <button class="ordenar" onclick="abrirMenu()">Ordenar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                <img
+                                src="Imagenes/Postre2.jpg"
+                                alt="Placeholder image"/>
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <figure class="image is-48x48">
+                                        <img
+                                        src="Imagenes/Mings.jpg"
+                                        alt="Placeholder image"
+                                        />
+                                        </figure>
+                                    </div>
+                                    <div class="media-content">
+                                        <p class="title is-4">Pastel de luna (Yue Bing)</p>
+                                    </div>
+                                </div>
+                        
+                                <div class="content">
+                                    Un pastel relleno que se disfruta durante el Festival del Medio Otoño, con rellenos como pasta de frijol rojo, pasta de loto, o yemas de huevo salado.
+                                    <a href="#">#postre</a>
+                                    <br>
+                                    <br>
+                                    <button class="ordenar" onclick="abrirMenu()">Ordenar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="IrMenu btn btn-primary" href="menu.html">Ir al Menu</a>
+            </div>
+            
+            <div id="FormularioPU" class="modal">
+                <div class="modal-content">
+                    <div class="tabs">
+                        <div id="tab1" class="active">Para Llevar</div>
+                        <div id="tab2">Domicilio</div>
+                    </div>
+            
+                    <div id="content2" class="tab-content">
+                        <form action="/formPedido" method="post" id="formulario2">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre2" placeholder="Ingresa tu nombre">
+                            <br><br>
+                            <label for="telefono">Número de Teléfono:</label>
+                            <input type="text" id="telefono" name="telefono" placeholder="Ingresa el número">
+                            <br><br>
+                            <label for="direccion">Dirección:</label>
+                            <input type="text" id="direccion" name="direccion" placeholder="Ingresa tu dirección" required>
+                            <br><br>
+            
+                            <div id="ordenar">
+                                <label for="ordenar">Ordenar:</label>
+                                <div class="cartaForm">
+                                    <h3>Combos</h3>
+                                    <div class="grid-container">
+                                        <!-- Combo 1 -->
+                                        <div class="combo-item" id="combo1">
+                                            <div class="combo-content">
+                                                <h4>Combo 1</h4>
+                                                <img src="Imagenes/Combo1.jpg" alt="Combo 1" style="height: 100px;">
+                                            </div>
+                                            <input type="hidden" name="ordenar[0][id]" value="1">
+                                            <div class="cantidad-wrapper">
+                                                <label for="cantidad1">Cantidad:</label>
+                                                <button type="button" onclick="adjustCantidad('cantidad1', 'combo1', 155, -1)">-</button>
+                                                <input type="number" id="cantidad1" name="ordenar[0][cantidad]" value="0" min="0">
+                                                <button type="button" onclick="adjustCantidad('cantidad1', 'combo1', 155, 1)">+</button>
+                                            </div>
+                                        </div>
+                                    
+                                        <!-- Combo 2 -->
+                                        <div class="combo-item" id="combo2">
+                                            <div class="combo-content">
+                                                <h4>Combo 2</h4>
+                                                <img src="Imagenes/Combo2.jpg" alt="Combo 2" style="height: 100px;">
+                                            </div>
+                                            <input type="hidden" name="ordenar[1][id]" value="2">
+                                            <div class="cantidad-wrapper">
+                                                <label for="cantidad2">Cantidad:</label>
+                                                <button type="button" onclick="adjustCantidad('cantidad2', 'combo2', 130, -1)">-</button>
+                                                <input type="number" id="cantidad2" name="ordenar[1][cantidad]" value="0" min="0">
+                                                <button type="button" onclick="adjustCantidad('cantidad2', 'combo2', 130, 1)">+</button>
+                                            </div>
+                                        </div>
+                                    
+                                        <!-- Combo 3 -->
+                                        <div class="combo-item" id="combo3">
+                                            <div class="combo-content">
+                                                <h4>Combo 3</h4>
+                                                <img src="Imagenes/Combo3.jpg" alt="Combo 3" style="height: 100px;">
+                                            </div>
+                                            <input type="hidden" name="ordenar[2][id]" value="3">
+                                            <div class="cantidad-wrapper">
+                                                <label for="cantidad3">Cantidad:</label>
+                                                <button type="button" onclick="adjustCantidad('cantidad3', 'combo3', 100, -1)">-</button>
+                                                <input type="number" id="cantidad3" name="ordenar[2][cantidad]" value="0" min="0">
+                                                <button type="button" onclick="adjustCantidad('cantidad3', 'combo3', 100, 1)">+</button>
+                                            </div>
+                                        </div>
+                                    
+                                        <!-- Combo 4 -->
+                                        <div class="combo-item" id="combo4">
+                                            <div class="combo-content">
+                                                <h4>Combo 4</h4>
+                                                <img src="Imagenes/Combo4.jpg" alt="Combo 4" style="height: 100px;">
+                                            </div>
+                                            <input type="hidden" name="ordenar[3][id]" value="4">
+                                            <div class="cantidad-wrapper">
+                                                <label for="cantidad4">Cantidad:</label>
+                                                <button type="button" onclick="adjustCantidad('cantidad4', 'combo4', 265, -1)">-</button>
+                                                <input type="number" id="cantidad4" name="ordenar[3][cantidad]" value="0" min="0">
+                                                <button type="button" onclick="adjustCantidad('cantidad4', 'combo4', 265, 1)">+</button>
+                                            </div>
+                                        </div>
+                                    
+                                        <!-- Combo 5 -->
+                                        <div class="combo-item" id="combo5">
+                                            <div class="combo-content">
+                                                <h4>Combo 5</h4>
+                                                <img src="Imagenes/Combo5.jpg" alt="Combo 5" style="height: 100px;">
+                                            </div>
+                                            <input type="hidden" name="ordenar[4][id]" value="5">
+                                            <div class="cantidad-wrapper">
+                                                <label for="cantidad5">Cantidad:</label>
+                                                <button type="button" onclick="adjustCantidad('cantidad5', 'combo5', 299, -1)">-</button>
+                                                <input type="number" id="cantidad5" name="ordenar[4][cantidad]" value="0" min="0">
+                                                <button type="button" onclick="adjustCantidad('cantidad5', 'combo5', 299, 1)">+</button>
+                                            </div>
+                                        </div>
+                                    
+                                        <!-- Combo 6 -->
+                                        <div class="combo-item" id="combo6">
+                                            <div class="combo-content">
+                                                <h4>Combo 6</h4>
+                                                <img src="Imagenes/Combo6.jpg" alt="Combo 6" style="height: 100px;">
+                                            </div>
+                                            <input type="hidden" name="ordenar[5][id]" value="6">
+                                            <div class="cantidad-wrapper">
+                                                <label for="cantidad6">Cantidad:</label>
+                                                <button type="button" onclick="adjustCantidad('cantidad6', 'combo6', 145, -1)">-</button>
+                                                <input type="number" id="cantidad6" name="ordenar[5][cantidad]" value="0" min="0">
+                                                <button type="button" onclick="adjustCantidad('cantidad6', 'combo6', 145, 1)">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="total-price">
+                                        <p><strong>Precio Total:</strong> $<span id="precio-total">0.00</span></p>
+                                    </div>                                    
+                                </div>
+                            </div>
+            
+                            <button id="boton1" type="button" onclick="cerrarMenu()">Cancelar</button>
+                            <button id="boton2" type="submit">Confirmar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="informacion">
+                <div class="contenidoInfo">
+                    <section class="texto">
+                        <img src="Imagenes/Mings.jpg" alt="">
+                    </section>
+                    <section class="info">
+                        <h2>Conoce más de Mings</h2>
+                        <div class="contder">
+                            <section class="conocenos">
+                                <p>Somos un restaurante de comida china conocido por su tradición y autenticidad. Fundado hace más de tres décadas, Ming's se ha convertido en un punto de referencia para los amantes de la gastronomía oriental. El restaurante comenzó como un pequeño negocio familiar. </p>
+
+                                <button type="button" class="btn btn-danger" onclick="abrirPU()">Ver Sucursales y Horarios</button>
+
+                                <div id="modal" class="modal">
+                                    <div class="modal-background"></div>
+                                    <div class="modal-content">
+                                        <div class="box">
+                                            <table class="table is-fullwidth">
+                                                    <th colspan="8">
+                                                        <center>Sucursales</center>
+                                                    </th>
+                                                    <tr>
+                                                        <td>
+                                                            <center>Dirección</center>
+                                                        </td>
+                                                        <td>
+                                                            <center>Lunes</center>
+                                                        </td>
+                                                        <td>
+                                                            <center>Martes</center>
+                                                        </td>
+                                                        <td>
+                                                            <center>Miercoles</center>
+                                                        </td>
+                                                        <td>
+                                                            <center>Jueves</center>
+                                                        </td>
+                                                        <td>
+                                                            <center>Viernes</center>
+                                                        </td>
+                                                        <td>
+                                                            <center>Sábado</center>
+                                                        </td>
+                                                        <td>
+                                                            <center>Domingo</center>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Marcelino Davalos #603. Col. Libertad</td>
+                                                        <td>10:00 AM - 10:00 PM</td>
+                                                        <td>10:00 AM - 10:00 PM</td>
+                                                        <td>Cerrado</td>
+                                                        <td>10:00 AM - 10:00 PM</td>
+                                                        <td>10:00 AM - 10:00 PM</td>
+                                                        <td>10:00 AM - 1:00 AM</td>
+                                                        <td>10:00 AM - 12:00 PM</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Av. Revolución #123</td>
+                                                        <td>10:00 AM - 10:00 PM</td>
+                                                        <td>Cerrado</td>
+                                                        <td>10:00 AM - 10:00 PM</td>
+                                                        <td>10:00 AM - 10:00 PM</td>
+                                                        <td>10:00 AM - 10:00 PM</td>
+                                                        <td>10:00 AM - 1:00 AM</td>
+                                                        <td>10:00 AM - 12:00 PM</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Insurgentes Sur #456</td>
+                                                        <td>Cerrado</td>
+                                                        <td>10:00 AM - 10:00 PM</td>
+                                                        <td>10:00 AM - 10:00 PM</td>
+                                                        <td>10:00 AM - 10:00 PM</td>
+                                                        <td>10:00 AM - 10:00 PM</td>
+                                                        <td>10:00 AM - 1:00 AM</td>
+                                                        <td>10:00 AM - 12:00 PM</td>
+                                                    </tr>
+                                                    <tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <button type="button" onclick="cerrarPU()" style="background-color: red; border-radius: 12px; box-shadow: 2px 2px 5px grey; color: white; padding: 10px 20px;">Ver Sucursales y Horarios</button>
+                                    <button class="modal-close is-large" aria-label="close" onclick="cerrarPU()"></button>
+                                    
+                                </div>
+                            </section>
+                        </div>
+                </div>
+            </div>
+
+            <div class="preguntas">
+                <section class="tituloProductos">
+                    <center><h2>Preguntas Frecuentes</h2></center>
+                </section>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            ¿Ofrecen opciones vegetarianas o veganas en su menú?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Sí, contamos con una amplia variedad de opciones vegetarianas y veganas. Entre nuestros platillos más populares se encuentran el tofu mapo sin carne, el chow mein de vegetales y los rollitos primavera rellenos de verduras frescas. Además, muchas de nuestras salsas son aptas para veganos, y siempre estamos dispuestos a ajustar los platos según las necesidades dietéticas de nuestros clientes.
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                ¿Realizan entregas a domicilio y cuál es el área de cobertura?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Sí, ofrecemos servicio de entrega a domicilio. Nuestro área de cobertura incluye las zonas cercanas a nuestros restaurantes, y también trabajamos con plataformas de entrega como Didi Food para llevar nuestros platillos a más áreas. Puede consultar la cobertura exacta ingresando su dirección en nuestro sitio web o aplicación móvil.
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            ¿Qué medidas de seguridad alimentaria tienen para clientes con alergias?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Tomamos las alergias alimentarias muy en serio. Si usted tiene alergia a ingredientes como el gluten, los cacahuates o el marisco, por favor notifíquelo al hacer su pedido y nuestros chefs tomarán precauciones adicionales para evitar la contaminación cruzada. Aunque hacemos todo lo posible para cumplir con estas medidas, no podemos garantizar un ambiente 100% libre de alérgenos debido a la naturaleza de nuestra cocina.                            </div>
+                        </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="footer" style="background-color: black;">
+            <div class="tres">
+                <div class="contactofoot">
+                    <h4>Acerca de Mings</h4>
+                    Contacto <br>
+                    <button onclick="abrirPU()">Ciudades con servicio</button> <br>
+                    <button onclick="abrirPU()">Horario de Sucrusales</button> <br>
+                    <div class="contador-visitas">
+                        <h4 style="color: red;">Contador de Visitas</h4>
+                        <p id="contador">Visitas: 0</p>
+                    </div>
+                    <!--La deje aquí pq no supe como llamar la funcion usando el LocalStorage-->
+                    <script>
+                        document.addEventListener('DOMContentLoaded', (event) => {
+                            contadorElement = document.getElementById('contador');
+                            visitas = localStorage.getItem('visitas') || 0;
+                            visitas++;
+                            localStorage.setItem('visitas', visitas);
+                            contadorElement.textContent = 'Visitas: ' + visitas;
+                        });
+                    </script>
+                </div>
+                <div class="horario">
+                    <h4>Horario de Atención de Oficinas</h4>
+                    <p>
+                        Mings <br>
+                        Lunes a Sábado 9:00am a 7:00pm <br>
+                        Domingo 9:00am a 2:00pm <br>
+                        Excepto días festivos <br>
+                        800-704-4400</p>
+                </div>
+                <div class="redes">
+                    <section class="textredes"><h4>Redes Sociales</h4></section>
+                    <section class="imgredes">
+                    <a href="https://www.facebook.com/profile.php?id=100063777235578&locale=es_LA"><img src="Imagenes/facebook.png" alt=""></a>
+                    <a href="https://www.instagram.com/mingsthing/"><img src="Imagenes/social.png" alt=""></a>
+                    <a href="https://x.com/ComidaChinaS"><img src="Imagenes/gorjeo.png" alt=""></a>
+                    <a href="https://www.youtube.com/watch?v=POXXOu6GIMI"><img src="Imagenes/youtube.png" alt=""></a>
+                    </section>
+                </div>
+        </div>
+        <div class="derechos"></div>
+            <marquee behavior="" direction="right"> © 2024 The Mings Company. Todos los derechos reservados. Clases de programación Web.</marquee>
+        </div>
+    </div>
+    <script src="/js/Proyecto.js" defer></script>
+</body>
+</html>
