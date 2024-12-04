@@ -1,10 +1,10 @@
-export const PORT= process.env.PORT || 3000;
+const PORT= process.env.PORT || 3000;
 
-export const DB_HOST = process.env.DB_HOST || 'autorack.proxy.rlwy.net';
-export const DB_USER = process.env.DB_USER || 'root';
-export const DB_PASSWORD = process.env.DB_PASSWORD || 'AYmkaivYPqdDoLDxAABioYSosCGLvOul';
-export const DB_NAME = process.env.DB_NAME || 'railway';
-export const DB_PORT = process.env.DB_PORT || 24830; 
+const DB_HOST = process.env.DB_HOST || 'autorack.proxy.rlwy.net';
+const DB_USER = process.env.DB_USER || 'root';
+const DB_PASSWORD = process.env.DB_PASSWORD || 'AYmkaivYPqdDoLDxAABioYSosCGLvOul';
+const DB_NAME = process.env.DB_NAME || 'railway';
+const DB_PORT = process.env.DB_PORT || 24830; 
 
 module.exports = {
     PORT,
