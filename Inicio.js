@@ -1,4 +1,3 @@
-
 const {PORT, DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT } = require('./Config.js');
 const express = require('express'); // Importamos el módulo express
 const mysql = require('mysql2'); // Importamos el módulo mysql
@@ -6,7 +5,6 @@ const session = require('express-session'); // Importamos el módulo express-ses
 const bodyParser = require('body-parser'); // Importamos el módulo body-parser
 const app = express();
 
-mysql://root:AYmkaivYPqdDoLDxAABioYSosCGLvOul@autorack.proxy.rlwy.net:24830/railway
 
 app.use(express.static('public'));
 
@@ -358,17 +356,6 @@ app.get('/obtenerPedidos/:id_usuario', (req, res) => {
     );
 });
 
-/*app.delete('/eliminarPedido/:id', (req, res) => {
-    const id_pedido = req.params.id;
-
-    conexion.query('DELETE FROM pedidos WHERE id_pedido = ?', [id_pedido], (error, results) => {
-        if (error) {
-            console.error('Error al eliminar pedido:', error);
-            return res.status(500).send('Error al eliminar el pedido.');
-        }
-        res.send({ message: 'Pedido eliminado correctamente.' });
-    });
-});*/
 
 app.put('/actualizarPedido/:id', (req, res) => {
     const id_pedido = req.params.id;
