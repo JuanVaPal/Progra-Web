@@ -19,6 +19,35 @@ let conexion = mysql.createConnection({
     database: DB_NAME,
     port: DB_PORT
 }); 
+
+function handleDisconnect() {
+    const connection = mysql.createConnection({
+      host: 'localhost',
+      user: 'user',
+      password: 'password',
+      database: 'database',
+    });
+  
+    connection.connect((err) => {
+      if (err) {
+        console.error('Error al conectar:', err);
+        setTimeout(handleDisconnect, 2000); // Reintento
+      } else {
+        console.log('Conexión restablecida');
+      }
+    });
+  
+    connection.on('error', (err) => {
+      if (err.code === 'PROTOCOL_CONNECTION_LOST') {
+        console.error('Conexión perdida. Reconectando...');
+        handleDisconnect();
+      } else {
+        throw err;
+      }
+    });
+  }
+  
+  handleDisconnect();
 //Vamos a usar el motor de plantillas ejs
 app.set('view engine', 'ejs');
 
